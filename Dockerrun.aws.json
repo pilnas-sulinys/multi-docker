@@ -5,12 +5,14 @@
             "name": "client",
             "image": "sulinys/multi-client",
             "hostname": "client",
-            "essential": false
+            "essential": false,
+            "memory": 128
         },
         {
             "name": "nginx",
             "image": "sulinys/multi-nginx",            
             "essential": true,
+            "memory": 128,
             "portMappings":[
                 {
                     "hostPort": 80,
@@ -22,12 +24,14 @@
         {   "name": "server",
             "image": "sulinys/multi-server",
             "hostname": "api",
-            "essential": false
+            "essential": false,
+            "memory": 128
         },
         {
             "name": "worker",
             "image": "sulinys/multi-worker",            
-            "essential": false
+            "essential": false,
+            "memory": 128
         }
     ]
 }
